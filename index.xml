@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://sne4kers.github.io/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Aug 2023 00:59:14 +0200</lastBuildDate><atom:link href="https://sne4kers.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1</title>
+      <link>https://sne4kers.github.io/posts/1/</link>
+      <pubDate>Tue, 22 Aug 2023 00:59:14 +0200</pubDate>
+      
+      <guid>https://sne4kers.github.io/posts/1/</guid>
+      <description>Hello World! This is my first post!</description>
+    </item>
+    
+  </channel>
+</rss>
