@@ -2,27 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://sne4kers.github.io/about/</loc>
+    <lastmod>2024-02-21T01:06:19+01:00</lastmod>
+  </url><url>
+    <loc>https://sne4kers.github.io/</loc>
+    <lastmod>2024-02-21T01:06:19+01:00</lastmod>
+  </url><url>
     <loc>https://sne4kers.github.io/posts/first_post/</loc>
-    <lastmod>2024-02-21T00:16:09+01:00</lastmod>
-  </url><url>
-    <loc>https://sne4kers.github.io/tags/html/</loc>
-    <lastmod>2024-02-21T00:16:09+01:00</lastmod>
-  </url><url>
-    <loc>https://sne4kers.github.io/tags/hugo/</loc>
-    <lastmod>2024-02-21T00:16:09+01:00</lastmod>
-  </url><url>
-    <loc>https://sne4kers.github.io/tags/markdown/</loc>
     <lastmod>2024-02-21T00:16:09+01:00</lastmod>
   </url><url>
     <loc>https://sne4kers.github.io/posts/</loc>
     <lastmod>2024-02-21T00:16:09+01:00</lastmod>
   </url><url>
-    <loc>https://sne4kers.github.io/tags/</loc>
-    <lastmod>2024-02-21T00:16:09+01:00</lastmod>
-  </url><url>
-    <loc>https://sne4kers.github.io/</loc>
-    <lastmod>2024-02-21T00:16:09+01:00</lastmod>
-  </url><url>
     <loc>https://sne4kers.github.io/categories/</loc>
+  </url><url>
+    <loc>https://sne4kers.github.io/series/</loc>
+  </url><url>
+    <loc>https://sne4kers.github.io/tags/</loc>
   </url>
 </urlset>
