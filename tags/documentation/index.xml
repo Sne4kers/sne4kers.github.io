@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Yehor Kozyr Blog</title>
-    <link>https://sne4kers.github.io/posts/</link>
-    <description>Recent content in Posts on Yehor Kozyr Blog</description>
+    <title>documentation on Yehor Kozyr Blog</title>
+    <link>https://sne4kers.github.io/tags/documentation/</link>
+    <description>Recent content in documentation on Yehor Kozyr Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© [Yehor Kozyr](https://sne4kers.github.io/about)</copyright>
     <lastBuildDate>Fri, 23 Feb 2024 11:20:17 +0100</lastBuildDate>
-    <atom:link href="https://sne4kers.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://sne4kers.github.io/tags/documentation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Qiskit Oracle Construction With Constants in Logical Expressions</title>
       <link>https://sne4kers.github.io/posts/qiskit-oracle-construction-with-constants-in-boolean-expression/</link>
       <pubDate>Fri, 23 Feb 2024 11:20:17 +0100</pubDate>
       <guid>https://sne4kers.github.io/posts/qiskit-oracle-construction-with-constants-in-boolean-expression/</guid>
       <description>&lt;p&gt;In this post I cover how to use a constant boolean value in a logical expression for Qiskit &lt;code&gt;PhaseOracle&lt;/code&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hello, World!</title>
-      <link>https://sne4kers.github.io/posts/first_post/</link>
-      <pubDate>Wed, 21 Feb 2024 00:16:09 +0100</pubDate>
-      <guid>https://sne4kers.github.io/posts/first_post/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>
