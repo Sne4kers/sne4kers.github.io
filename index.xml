@@ -6,14 +6,14 @@
     <description>Recent content in Welcome to my blog! on Yehor Kozyr Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© [Yehor Kozyr](https://sne4kers.github.io/about)</copyright>
+    <copyright>© [Yehor Kozyr](/about)</copyright>
     <lastBuildDate>Wed, 21 Feb 2024 01:06:19 +0100</lastBuildDate>
     <atom:link href="https://sne4kers.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Qiskit Oracle Construction With Constants in Logical Expressions</title>
-      <link>https://sne4kers.github.io/posts/qiskit-oracle-construction-with-constants-in-boolean-expression/</link>
+      <title>Qiskit PhaseOracle Construction With Constants in Logical Expressions</title>
+      <link>https://sne4kers.github.io/posts/qiskit-phase-oracle-construction-with-constants-in-logical-expressions/</link>
       <pubDate>Fri, 23 Feb 2024 11:20:17 +0100</pubDate>
-      <guid>https://sne4kers.github.io/posts/qiskit-oracle-construction-with-constants-in-boolean-expression/</guid>
+      <guid>https://sne4kers.github.io/posts/qiskit-phase-oracle-construction-with-constants-in-logical-expressions/</guid>
       <description>&lt;p&gt;In this post I cover how to use a constant boolean value in a logical expression for Qiskit &lt;code&gt;PhaseOracle&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
@@ -21,7 +21,7 @@
       <link>https://sne4kers.github.io/about/</link>
       <pubDate>Wed, 21 Feb 2024 01:06:19 +0100</pubDate>
       <guid>https://sne4kers.github.io/about/</guid>
-      <description>Welcome to my blog! I write about software engineering &amp;ndash; my personal projects, projects I find interesting, explanations of some LeetCode problems, concepts and topics that don&amp;rsquo;t have enough explanation online. Feel free to check out my pages in other locations of the Internet:&#xA;Personal website: soon™&#xA;Instagram: @ykozyr&#xA;LinkedIn: Yehor Kozyr&#xA;LeetCode: Sne4kers&#xA;GitHub: Sne4kers&#xA;I am looking for a job. Get my CV here.&#xA;Contact: soon™, for now use LinkedIn</description>
+      <description>Welcome to my blog! I write about software engineering &amp;ndash; my personal projects, projects I find interesting, explanations of some LeetCode problems, concepts and topics that don&amp;rsquo;t have enough explanation online. Feel free to check out my pages in other locations of the Internet:&#xA;Personal website: soon™ (at the moment, my blog acts like one)&#xA;LinkedIn: Yehor Kozyr&#xA;GitHub: Sne4kers&#xA;LeetCode: Sne4kers&#xA;Instagram: @ykozyr&#xA;I am looking for a job. Get my CV here.</description>
     </item>
     <item>
       <title>Hello, World!</title>
