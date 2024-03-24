@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head><title>My Experience at LeetCode Biweekly Contest 125 &ndash; Yehor Kozyr Blog</title>
+<meta name="description" content="I write sometimes, mostly about software engineering. 
+ I am currently looking for a job, check out my resume [here](https://github.com/Sne4kers/cv/releases).">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8"/>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<link rel="stylesheet" href="https://sne4kers.github.io/css/palettes/base16-dark.css">
+<link rel="stylesheet" href="https://sne4kers.github.io/css/risotto.css">
+<link rel="stylesheet" href="https://sne4kers.github.io/css/custom.css">
+
+
+
+
+
+
+
+</head>
+
+    <body>
+        <div class="page">
+
+            <header class="page__header"><nav class="page__nav main-nav">
+    <ul>
+    <h1 class="page__logo"><a href="https://sne4kers.github.io/" class="page__logo-inner">Yehor Kozyr Blog</a></h1>
+    
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://sne4kers.github.io/about/" title="">About</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="https://sne4kers.github.io/about/" title="About me">About me</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item active" href="https://sne4kers.github.io/posts/" title="Posts">Posts</a></li>
+    
+    </ul>
+</nav>
+
+</header>   
+            <section class="page__body">
+    <header class="content__header">
+        <h1>My Experience at LeetCode Biweekly Contest 125</h1>
+    </header>
+    <br>
+    <div class="content__body">
+        <p>I promised that I would write about my solving some LeetCode problems. So here it is, my first post about LeetCode.</p>
+<p>This was my first contest in a while. This time I decided to come back to LeetCode and contests in particular to get a Guardian badge. I don&rsquo;t have one, only limited number of people have it, so why wouldn&rsquo;t I try achieve this interesting goal? The conditions of getting one are quite difficult, as you need to have 1) a contest rating higher than a certain threshold 2) get into top 5% of the contest ranking. The second condition is the most difficult to get,in my opinion. I have done it only once prior to this contest, so it would be a tough one to repeat. While gaining a rating would be just a matter of a few consistent performances. With the goal of getting a badge, I have registered for the contest and here are the problems that met me:</p>
+<h2 id="1-3065-minimum-operations-to-exceed-threshold-value-ihttpsleetcodecomproblemsminimum-operations-to-exceed-threshold-value-idescription">1. <a href="https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-i/description/">3065. Minimum Operations to Exceed Threshold Value I</a></h2>
+<p>This problem is probably the easiest problem I have seen at the LeetCode contest. The text of the problem is short and simple:</p>
+<p>You are given a <strong>0-indexed</strong> integer array <code>nums</code>, and an integer <code>k</code>.
+In one operation, you can remove one occurrence of the smallest element of <code>nums</code>.
+Return <em>the <strong>minimum</strong> number of operations needed so that all elements of the array are greater than or equal to</em> <code>k</code>.</p>
+<br>
+<p><strong>Example 1</strong>:</p>
+<pre tabindex="0"><code>Input: nums = [2,11,10,1,3], k = 10
+Output: 3
+</code></pre><p><strong>Example 2</strong>:</p>
+<pre tabindex="0"><code>Input: nums = [1,1,2,4,9], k = 1
+Output: 0
+</code></pre><br>
+<p>To solve this problem, just iterate over a list and calculate the number of elements that don&rsquo;t satisfy the condition. Simple code for the problem is below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> minOperations(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums, <span style="color:#66d9ef">int</span> k) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> e : nums){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(e <span style="color:#f92672">&lt;</span> k)
+</span></span><span style="display:flex;"><span>                count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> count;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><br>
+<br>
+<br>
+<h2 id="2-3066-minimum-operations-to-exceed-threshold-value-iihttpsleetcodecomproblemsminimum-operations-to-exceed-threshold-value-iidescription">2. <a href="https://leetcode.com/problems/minimum-operations-to-exceed-threshold-value-ii/description/">3066. Minimum Operations to Exceed Threshold Value II</a></h2>
+<p>This problem is a slight modification of the previous problem, here is the text:</p>
+<p>You are given a <strong>0-indexed</strong> integer array <code>nums</code>, and an integer <code>k</code>.
+In one operation, you will:</p>
+<ul>
+<li>Take the two smallest integers <code>x</code> and <code>y</code> in nums.</li>
+<li>Remove <code>x</code> and <code>y</code> from <code>nums</code>.</li>
+<li>Add <code>min(x, y) * 2 + max(x, y)</code> anywhere in the array.</li>
+</ul>
+<p><strong>Note</strong> that you can only apply the described operation if <code>nums</code> contains at least two elements.</p>
+<p>Return <em>the <strong>minimum</strong> number of operations needed so that all elements of the array are greater than or equal to</em> <code>k</code>.</p>
+<p><strong>Example 1</strong>:</p>
+<pre tabindex="0"><code>Input: nums = [2,11,10,1,3], k = 10\
+Output: 3
+</code></pre><p><strong>Example 2</strong>:</p>
+<pre tabindex="0"><code>Input: nums = [1,1,2,4,9], k = 1\
+Output: 0
+</code></pre><p>Notice that operation that we are applying is predetermined by the state of array. Therefore, given an array of numbers, the only option for us is to simulate the described behavior. There is nothing that depends on us, except of efficiency and to have that, we will use priority queue. First, push all elements into <code>priority_queue</code> that is setup as a min-heap. Repeat operation until the condition is satisfied or there are no more elements left. My submission is below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> minOperations(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums, <span style="color:#66d9ef">int</span> k) {
+</span></span><span style="display:flex;"><span>        priority_queue<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span>, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>, greater<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> pq;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> e : nums)
+</span></span><span style="display:flex;"><span>            pq.push(e);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span>(pq.size() <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">&amp;&amp;</span> (pq.top() <span style="color:#f92672">&lt;</span> k)){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> pq.top();
+</span></span><span style="display:flex;"><span>            pq.pop();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> pq.top();
+</span></span><span style="display:flex;"><span>            pq.pop();
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> c <span style="color:#f92672">=</span> min(a, b) <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> max(a, b);
+</span></span><span style="display:flex;"><span>            pq.push(c);
+</span></span><span style="display:flex;"><span>            count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> count;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><br>
+<br>
+<br>
+<h2 id="3-3067-count-pairs-of-connectable-servers-in-a-weighted-tree-networkhttpsleetcodecomproblemscount-pairs-of-connectable-servers-in-a-weighted-tree-networkdescription">3. <a href="https://leetcode.com/problems/count-pairs-of-connectable-servers-in-a-weighted-tree-network/description/">3067. Count Pairs of Connectable Servers in a Weighted Tree Network</a></h2>
+<p>At first, I skipped this problem because I didn&rsquo;t pay enough attention when reading the text. It seemed difficult, and having an adrenaline of keeping a good pace (done with first two problems in 0:07:45) and not willing to lose time here, I switched to problem number 4, which I loved. But let&rsquo;s do this problem first.</p>
+<p>You are given an unrooted weighted tree with <code>n</code> vertices representing servers numbered from <code>0</code> to <code>n - 1</code>, an array edges where <code>edges[i] = [a_i, b_i, weight_i]</code> represents a bidirectional edge between vertices <code>a_i</code> and <code>b_i</code> of weight <code>weight_i</code>. You are also given an integer <code>signalSpeed</code>.</p>
+<p>Two servers <code>a</code> and <code>b</code> are connectable through a server <code>c</code> if:</p>
+<ul>
+<li><code>a &lt; b</code>, <code>a != c</code> and <code>b != c</code>.</li>
+<li>The distance from <code>c</code> to <code>a</code> is divisible by <code>signalSpeed</code>.</li>
+<li>The distance from <code>c</code> to <code>b</code> is divisible by <code>signalSpeed</code>.</li>
+<li>The path from <code>c</code> to <code>b</code> and the path from <code>c</code> to <code>a</code> do not share any edges.</li>
+</ul>
+<p>Return <em>an integer array <code>count</code> of length <code>n</code> where <code>count[i]</code> is the <strong>number</strong> of server pairs that are <strong>connectable</strong> through the server <code>i</code>.</em></p>
+<p>Example 1:</p>
+<p><img src="https://assets.leetcode.com/uploads/2024/01/21/example22.png" alt=""></p>
+<pre tabindex="0"><code>Input: edges = [[0,1,1],[1,2,5],[2,3,13],[3,4,9],[4,5,2]], signalSpeed = 1
+Output: [0,4,6,6,4,0]
+</code></pre><p>Looking back, this code can be definitely improved, but it works, so let&rsquo;s try to understand it. First, construct a graph. As the requirement states, we are given a valid tree, then the only possible way for paths to share an edge, if they are in the same subtree, relatively to the current considered root. Therefore, to solve the problem we can apply the following algorithm:</p>
+<ol>
+<li>Consider each vertices as the root.</li>
+<li>Count number of vertices, that satisfy the condition of &ldquo;distance from <code>c</code> to <code>b</code> is divisible by <code>signalSpeed</code>&rdquo; in each subtree.</li>
+<li>Calculate number of possible combinations, by multiplying the number of eligible vertices for each pair of the subtrees.</li>
+</ol>
+<p>The code below does exactly that.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> countPairsOfConnectableServers(vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;&amp;</span> edges, <span style="color:#66d9ef">int</span> signalSpeed) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> edges.size() <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Initialize the graph
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span>pair<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>,<span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;&gt;</span> g(n, vector<span style="color:#f92672">&lt;</span>pair<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>,<span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span>(<span style="color:#ae81ff">0</span>));
+</span></span><span style="display:flex;"><span>        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> result(n, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> edge : edges){
+</span></span><span style="display:flex;"><span>            g[edge[<span style="color:#ae81ff">0</span>]].push_back(pair(edge[<span style="color:#ae81ff">1</span>], edge[<span style="color:#ae81ff">2</span>]));
+</span></span><span style="display:flex;"><span>            g[edge[<span style="color:#ae81ff">1</span>]].push_back(pair(edge[<span style="color:#ae81ff">0</span>], edge[<span style="color:#ae81ff">2</span>]));
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// For each vertex, perform DFS
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> current <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; current <span style="color:#f92672">&lt;</span> n; current<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> distances(g[current].size(), vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>(n, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>));
+</span></span><span style="display:flex;"><span>            vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> visited(g[current].size(), <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Modified DFS, that would start from the edge, to easily check for condition 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// of sharing any edges
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> start_edge_idx <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; start_edge_idx <span style="color:#f92672">&lt;</span> g[current].size(); start_edge_idx<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>                distances[start_edge_idx][current] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>                distances[start_edge_idx][g[current][start_edge_idx].first] <span style="color:#f92672">=</span> g[current][start_edge_idx].second;
+</span></span><span style="display:flex;"><span>                deque<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> q_cur;
+</span></span><span style="display:flex;"><span>                q_cur.push_back(g[current][start_edge_idx].first);
+</span></span><span style="display:flex;"><span>                visited[start_edge_idx] <span style="color:#f92672">=</span> (g[current][start_edge_idx].second <span style="color:#f92672">%</span> signalSpeed <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">while</span>(<span style="color:#f92672">!</span>q_cur.empty()){
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> q_cur.front();
+</span></span><span style="display:flex;"><span>                    q_cur.pop_front();
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> edge : g[a]){
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span>(distances[start_edge_idx][edge.first] <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>){
+</span></span><span style="display:flex;"><span>                            q_cur.push_back(edge.first);
+</span></span><span style="display:flex;"><span>                            distances[start_edge_idx][edge.first] <span style="color:#f92672">=</span> distances[start_edge_idx][a] <span style="color:#f92672">+</span> edge.second;
+</span></span><span style="display:flex;"><span>                            <span style="color:#66d9ef">if</span>(distances[start_edge_idx][edge.first] <span style="color:#f92672">%</span> signalSpeed <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>                                visited[start_edge_idx]<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>                        }
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Calculate nubmer of possible combinations
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> g[current].size(); i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;</span> g[current].size(); j<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>                    result[current] <span style="color:#f92672">+=</span> visited[i] <span style="color:#f92672">*</span> visited[j];
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> result;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><br>
+<br>
+<br>
+<h2 id="4-3068-find-the-maximum-sum-of-node-valueshttpsleetcodecomproblemsfind-the-maximum-sum-of-node-valuesdescription">4. <a href="https://leetcode.com/problems/find-the-maximum-sum-of-node-values/description/">3068. Find the Maximum Sum of Node Values</a></h2>
+<p>There exists an <strong>undirected</strong> tree with n nodes numbered <code>0</code> to <code>n - 1</code>. You are given a <strong>0-indexed</strong> 2D integer array <code>edges</code> of length <code>n - 1</code>, where <code>edges[i] = [u_i, v_i]</code> indicates that there is an edge between nodes <code>u_i</code> and <code>v_i</code> in the tree. You are also given a <strong>positive</strong> integer <code>k</code>, and a <strong>0-indexed</strong> array of non-negative integers <code>nums</code> of length <code>n</code>, where <code>nums[i]</code> represents the <strong>value</strong> of the node numbered <code>i</code>.</p>
+<p>Alice wants the sum of values of tree nodes to be <strong>maximum</strong>, for which Alice can perform the following operation <strong>any</strong> number of times <strong>(including zero)</strong> on the tree:</p>
+<ul>
+<li>Choose any edge <code>[u, v]</code> connecting the nodes <code>u</code> and <code>v</code>, and update their values as follows:
+<ul>
+<li><code>nums[u] = nums[u] XOR k</code></li>
+<li><code>nums[v] = nums[v] XOR k</code></li>
+</ul>
+</li>
+</ul>
+<p>Return <em>the <strong>maximum</strong> possible <strong>sum</strong> of the <strong>values</strong> Alice can achieve by performing the operation <strong>any</strong> number of times</em>.</p>
+<p>I absolutely loved the problem, as it requires you to find an interesting observation about the provided operation. We can perform the given operation not only on those vertices that are connected by a direct edge, but on any pair of two vertices that have a path in between. The given structure of edges is a valid tree according to the requirements, therefore this operation can be applied on any pair of vertices. Let&rsquo;s figure out why this works.</p>
+<p>First of all, <code>XOR</code> has a property we are interested in which is <code>a XOR b XOR b = a</code>, as <code>b XOR b = 0</code>. If there is a path between <code>a</code> and <code>b</code> of form</p>
+<p><code>a -- c_1 -- c_2 -- ... c_n -- b</code></p>
+<p>we can apply <code>n + 1</code> operations for each pair of neighbor and get values of</p>
+<p><code>a XOR k -- c_1 -- c_2 -- ... c_n -- b XOR k</code></p>
+<p>as <code>a</code> and <code>b</code> are going to be teh only vertices to which operation will be applied once.</p>
+<p>Having improved our understanding of this operation, let&rsquo;s try maximize value sum with the new knowledge. After applying operations, each vertex can have only 1 one of the 2 value &ndash; <code>nums[i]</code> or <code>nums[i] XOR k</code>. Let&rsquo;s sum the maximum of the two for each of the vertices. This would result in the correct answer, if the number of cases where <code>nums[i] &lt; nums[i] XOR k</code> is even. In the it is odd, we need to either get rid of the entry with maximum <code>nums[i] - nums[i] XOR k</code> by replacing its <code>nums[i] XOR k</code> with <code>nums[i]</code> or get rid of the entry with minimum <code>nums[i] XOR k - nums[i]</code> by replacing its <code>nums[i]</code> with <code>nums[i] XOR k</code>. In this way, we would minimize the loss in the sum in order to satisfy the conditions, which is equivalent to maximizing the sum.</p>
+<p>The code below implements the presented algorithm.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> maximumValueSum(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums, <span style="color:#66d9ef">int</span> k, vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;&amp;</span> edges) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> total_sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> such_that <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> minimum_gain <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e9</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> minimum_loss <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e9</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> nums.size(); i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>((nums[i] <span style="color:#f92672">^</span> k) <span style="color:#f92672">&gt;</span> nums[i]){
+</span></span><span style="display:flex;"><span>                such_that<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>                total_sum <span style="color:#f92672">+=</span> nums[i] <span style="color:#f92672">^</span> k;
+</span></span><span style="display:flex;"><span>                minimum_gain <span style="color:#f92672">=</span> min((nums[i] <span style="color:#f92672">^</span> k) <span style="color:#f92672">-</span> nums[i], minimum_gain);
+</span></span><span style="display:flex;"><span>            } <span style="color:#66d9ef">else</span>{
+</span></span><span style="display:flex;"><span>                minimum_loss <span style="color:#f92672">=</span> min(nums[i] <span style="color:#f92672">-</span> (nums[i] <span style="color:#f92672">^</span> k), minimum_loss);
+</span></span><span style="display:flex;"><span>                total_sum <span style="color:#f92672">+=</span> nums[i];
+</span></span><span style="display:flex;"><span>            } 
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(such_that <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> total_sum;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> total_sum <span style="color:#f92672">-</span> min(minimum_gain, minimum_loss);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>What&rsquo;s funny about it, is that we even haven&rsquo;t used <code>edges</code> in any way, as we found the invariant of the operation.</p>
+<br>
+<br>
+<br>
+<h2 id="retrospective">Retrospective</h2>
+<p>Looking back, this was a good way to get back into LeetCode contests, as I solved all of the problems. Being excited after the contest, I also decided to stay up until 5AM to also participate in the Weekly Contest which is in the US timezone, where I also solved all of the problems. In order to improve my ranking in the contests, I need to have less bad submission, as I get at least a couple in each contest. I need to be more attentive and spend a bit more time debugging the solution, rather than submit the solution straight away.</p>
+<p>As the result fo 2 contests, I improved my rating by +45 as the result of the Biweelky contest and +12 as the result of the Weekly contest, adding up to a total +57 in a single weekend. Stay tuned for the next parts, as I am on the way to achieve the Guardian badge.</p>
+<p>I will also spend more time on my personal projects and articles about them are coming as soon as I polish them enough. You don&rsquo;t want to see ugly code and design choices, right? :)</p>
+    </div>
+    <footer class="content__footer"></footer>
+
+            </section>
+
+            <section class="page__aside">
+                <div class="aside__about">
+<div class="aside__about">
+    
+<h1 class="about__title">Yehor Kozyr Blog</h1>
+<p class="about__description">I write sometimes, mostly about software engineering.
+I am currently looking for a job, check out my resume <a href="https://github.com/Sne4kers/cv/releases">here</a>.</p>
+</div>
+
+
+<ul class="aside__social-links">
+    
+    <li>
+        <a href="https://github.com/sne4kers" rel="me" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+    <li>
+        <a href="mailto:yehor@kozyr.xyz" rel="me" aria-label="Email" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+    <li>
+        <a href="https://www.linkedin.com/in/yehor-kozyr/" rel="me" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a>&nbsp;
+    </li>
+    
+</ul>
+</div>
+                <hr>
+                <div class="aside__content">
+    
+    
+        <p>
+            By Yehor Kozyr, 
+            2024-03-03
+        </p>
+    
+
+    
+
+                </div>
+            </section>
+
+            <footer class="page__footer"><p>
+    
+    
+    
+    
+    
+    
+      
+    
+      
+    
+      
+    
+    
+    
+      
+      
+          
+            
+            
+                <br/><span class="active">$ echo $LANG<br/><b></b></span><br/>
+
+            
+          
+      
+    
+</p>
+<br /><br />
+<p class="copyright">© <a href="/about">Yehor Kozyr</a></p>
+<p class="advertisement">Powered by <a href="https://gohugo.io/">hugo</a> and <a href="https://github.com/joeroe/risotto">risotto</a>.</p>
+</footer>
+
+        </div>
+    </body>
+
+</html>

@@ -2,8 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://sne4kers.github.io/tags/c&#43;&#43;/</loc>
+    <lastmod>2024-03-03T23:52:50+01:00</lastmod>
+  </url><url>
     <loc>https://sne4kers.github.io/categories/</loc>
-    <lastmod>2024-02-23T11:20:17+01:00</lastmod>
+    <lastmod>2024-03-03T23:52:50+01:00</lastmod>
+  </url><url>
+    <loc>https://sne4kers.github.io/categories/leetcode/</loc>
+    <lastmod>2024-03-03T23:52:50+01:00</lastmod>
+  </url><url>
+    <loc>https://sne4kers.github.io/posts/my-experience-at-leetcode-biweekly-contest-125/</loc>
+    <lastmod>2024-03-03T23:52:50+01:00</lastmod>
+  </url><url>
+    <loc>https://sne4kers.github.io/posts/</loc>
+    <lastmod>2024-03-03T23:52:50+01:00</lastmod>
+  </url><url>
+    <loc>https://sne4kers.github.io/tags/</loc>
+    <lastmod>2024-03-03T23:52:50+01:00</lastmod>
   </url><url>
     <loc>https://sne4kers.github.io/tags/documentation/</loc>
     <lastmod>2024-02-23T11:20:17+01:00</lastmod>
@@ -11,16 +26,13 @@
     <loc>https://sne4kers.github.io/categories/how-to/</loc>
     <lastmod>2024-02-23T11:20:17+01:00</lastmod>
   </url><url>
-    <loc>https://sne4kers.github.io/posts/</loc>
+    <loc>https://sne4kers.github.io/tags/python/</loc>
     <lastmod>2024-02-23T11:20:17+01:00</lastmod>
   </url><url>
     <loc>https://sne4kers.github.io/posts/qiskit-phase-oracle-construction-with-constants-in-logical-expressions/</loc>
     <lastmod>2024-02-23T11:20:17+01:00</lastmod>
   </url><url>
     <loc>https://sne4kers.github.io/tags/quantum/</loc>
-    <lastmod>2024-02-23T11:20:17+01:00</lastmod>
-  </url><url>
-    <loc>https://sne4kers.github.io/tags/</loc>
     <lastmod>2024-02-23T11:20:17+01:00</lastmod>
   </url><url>
     <loc>https://sne4kers.github.io/tags/tutorial/</loc>
